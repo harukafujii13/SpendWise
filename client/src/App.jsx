@@ -1,8 +1,10 @@
 import { react } from 'react';
-import SignUp from './components/signUp/signUp';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './components/logIn/login';
-import Homepage from './components/homepage/homepage';
+import ExpensePage from './page/ExpensePage/ExpensePage';
+import HomePage from './page/homepage/homepage';
+import IncomePage from './page/IncomePage/IncomePage';
+import LoginPage from './page/LoginPage/LoginPage';
+import SignupPage from './page/SignupPage/SignupPage';
 
 function App() {
   return (
@@ -10,13 +12,19 @@ function App() {
       <Routes>
         <Route
           path="/register"
-          element={<SignUp />}></Route>
+          element={<SignupPage />}></Route>
         <Route
           path="/login"
-          element={<Login />}></Route>
+          element={<LoginPage />}></Route>
         <Route
           path="/home"
-          element={<Homepage />}></Route>
+          element={<HomePage />}></Route>
+        <Route
+          path="/income"
+          element={<IncomePage />}></Route>
+        <Route
+          path="/expense"
+          element={<ExpensePage />}></Route>
       </Routes>
     </BrowserRouter>
   );
